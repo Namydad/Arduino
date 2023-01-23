@@ -23,11 +23,13 @@ int zaehlautomat(){
     static int zustand = 0;
 
     switch(zustand){
-        case 0: zustand = 1; break;
+        case 0: zustand = 1; return 1; break;
 
-        case 1: zustand = 2; break;
+        case 1: zustand = 2; return 3; break;
 
-        case 2: zustand = 0; break;
+        case 2: zustand = 3; return 3; break;
+        
+        case 3: zustand = 0; return 7; break;
 
     }
 
